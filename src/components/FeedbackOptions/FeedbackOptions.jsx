@@ -18,3 +18,9 @@ export const FeedbackOptions = ({
     </button>
   </div>
 );
+
+FeedbackOptions.propTypes = {
+  hendleCountGood: PropTypes.func,
+  hendleCountNeutral: PropTypes.func,
+  hendleCountBad: PropTypes.func,
+};

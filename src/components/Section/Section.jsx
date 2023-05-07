@@ -7,3 +7,8 @@ export const Section = ({ title, children }) => (
     {children}
   </section>
 );
+
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.element,
+};
