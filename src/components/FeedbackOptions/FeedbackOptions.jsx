@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
-// import {} from './FeedbackOptionsStyled';
+import { Button } from './FeedbackOptionsStyled';
 
 export const FeedbackOptions = ({
-  hendleCountGood,
-  hendleCountNeutral,
-  hendleCountBad,
+  onCountGood,
+  onCountNeutral,
+  onCountBad,
 }) => (
-  <div>
-    <button type="button" onClick={hendleCountGood}>
+  <Button>
+    <button type="button" onClick={onCountGood}>
       Good
     </button>
-    <button type="button" onClick={hendleCountNeutral}>
+    <button type="button" onClick={onCountNeutral}>
       Neutral
     </button>
-    <button type="button" onClick={hendleCountBad}>
+    <button type="button" onClick={onCountBad}>
       Bad
     </button>
-  </div>
+  </Button>
 );
 
 FeedbackOptions.propTypes = {
-  hendleCountGood: PropTypes.func,
-  hendleCountNeutral: PropTypes.func,
-  hendleCountBad: PropTypes.func,
+  onCountGood: PropTypes.func,
+  onCountNeutral: PropTypes.func,
+  onCountBad: PropTypes.func,
 };

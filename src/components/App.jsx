@@ -39,9 +39,9 @@ export class App extends React.Component {
       <>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
-            hendleCountGood={this.hendleCountGood}
-            hendleCountNeutral={this.hendleCountNeutral}
-            hendleCountBad={this.hendleCountBad}
+            onCountGood={this.hendleCountGood}
+            onCountNeutral={this.hendleCountNeutral}
+            onCountBad={this.hendleCountBad}
           />
         </Section>
         <Section title={'Statistics'}>
