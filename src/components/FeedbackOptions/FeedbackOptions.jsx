@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptionsStyled';
 
-export const FeedbackOptions = ({ onCount, onCountNeutral, onCountBad }) => (
+export const FeedbackOptions = ({ onCount }) => (
   <Button>
     <button type="button" onClick={() => onCount('good')}>
       Good
