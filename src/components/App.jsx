@@ -11,16 +11,11 @@ export class App extends React.Component {
     bad: 0,
   };
 
-  hendleCountGood = () => {
-    this.setState(prevState => ({ good: prevState.good + 1 }));
-  };
-
-  hendleCountNeutral = () => {
-    this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
-  };
-
-  hendleCountBad = () => {
-    this.setState(prevState => ({ bad: prevState.bad + 1 }));
+  handleCount = btnName => {
+    console.log(btnName);
+    this.setState(prevState => ({
+      [btnName]: prevState[btnName] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
@@ -38,11 +33,7 @@ export class App extends React.Component {
     return (
       <>
         <Section title={'Please leave feedback'}>
-          <FeedbackOptions
-            onCountGood={this.hendleCountGood}
-            onCountNeutral={this.hendleCountNeutral}
-            onCountBad={this.hendleCountBad}
-          />
+          <FeedbackOptions onCount={this.handleCount} />
         </Section>
         <Section title={'Statistics'}>
           {(this.state.good || this.state.neutral || this.state.bad) !== 0 ? (

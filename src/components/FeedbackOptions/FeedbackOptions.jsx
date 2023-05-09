@@ -1,19 +1,15 @@
 import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptionsStyled';
 
-export const FeedbackOptions = ({
-  onCountGood,
-  onCountNeutral,
-  onCountBad,
-}) => (
+export const FeedbackOptions = ({ onCount, onCountNeutral, onCountBad }) => (
   <Button>
-    <button type="button" onClick={onCountGood}>
+    <button type="button" onClick={() => onCount('good')}>
       Good
     </button>
-    <button type="button" onClick={onCountNeutral}>
+    <button type="button" onClick={() => onCount('neutral')}>
       Neutral
     </button>
-    <button type="button" onClick={onCountBad}>
+    <button type="button" onClick={() => onCount('bad')}>
       Bad
     </button>
   </Button>
